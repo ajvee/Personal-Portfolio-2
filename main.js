@@ -7,9 +7,9 @@ const input = document.querySelector("input");
 const form = document.querySelector('form');
 const main = document.querySelector('main');
 const imgDiv =document.querySelector('div');
-const quote2 = document.querySelector('#quote2')
-const character = document.querySelector('#character')
-const anime2 = document.querySelector('#anime2')
+const quote2 = document.querySelector('#quote2');
+const character = document.querySelector('#character');
+const anime2 = document.querySelector('#anime2');
 
 // form.addEventListener('submit', (event) => {
 //   event.preventDefault()
