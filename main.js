@@ -4,17 +4,18 @@ const BASE_URL = `https://animechan.vercel.app/api/random`
 // const characterURL = `https://animechan.vercel.app/api/random/character?name=saitama`
 const button = document.querySelector("button");
 const input = document.querySelector("input");
-const form = document.querySelector('form');
+const searching = document.querySelector('searching');
 const main = document.querySelector('main');
 const imgDiv =document.querySelector('div');
 const quote2 = document.querySelector('#quote2');
 const character = document.querySelector('#character');
 const anime2 = document.querySelector('#anime2');
 
-// form.addEventListener('submit', (event) => {
-//   event.preventDefault()
-//   const search = document.querySelector('#inputText')
-//   let x = search.value
+// form.addEventListener("searching", (event) => {
+//       event.preventDefault()
+        
+//       const search = document.querySelector('#inputText')
+// //   let x = search.value
 
 // const url = `${BASE_URL}${x}${titleURL}`
 // form.reset()
@@ -42,6 +43,9 @@ fetch(BASE_URL)
 
 console.log()
 
-})
-
+  })
 //})
+
+//  work on prevent default withing lines 14-20...don't bite off more than you can chew...In my behalf you are maming good progress... obviosuly work on the CSS aspect but I think you have that under the bag..work on the JS for SURE..
+
+
