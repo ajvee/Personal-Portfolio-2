@@ -2,15 +2,10 @@ const BASE_URL = `https://animechan.vercel.app/api/random`
 //const button = document.querySelector("button");
 //const input = document.querySelector("input");
 const main = document.querySelector('main');
-//const imgDiv =document.querySelector('div');
 const quote2 = document.querySelector('#quote2');
 const character = document.querySelector('#character');
 const anime2 = document.querySelector('#anime2');
 const form = document.querySelector('#barS');
-
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-form.reset()
 
 fetch(BASE_URL)
  .then((res) => res.json())
@@ -36,31 +31,34 @@ fetch(BASE_URL)
  })
 .catch((err) => console.log(err))
 
+const titleURL = `https://animechan.vercel.app/api/random/anime?title=`
+const searching = document.querySelector('#searching');
+const anime3 = document.querySelector('#anime3');
+const quote3 = document.querySelector('#quote3');
+
+searching.addEventListener("submit", (event) => {
+  event.preventDefault()
+  const search = document.querySelector('#inputText')
+  
+  let userAnimeInput = search.value
+
+  const url = `${titleURL}${userAnimeInput}`
+ 
+form.reset()
+fetch (url)
+.then((response) => response.json())
+.then((mainTitle) => {
+
+  const show = mainTitle.anime;
+  const showS = document.createElement('p');
+  showS.innerHTML = `<strong>Anime: </strong>${show}`;
+  anime3.append(showS);
+
+  const animeTitle = mainTitle.anime;
+  const titleS = document.createElement('p');
+  titleS.innerHTML = `<strong>Quote: </strong>${animeTitle}`;
+  quote3.append(showS);
+  
 })
-
-
-// const titleURL = `https://animechan.vercel.app/api/random/anime`
-// const form = document.querySelector('#searching');
-// const anime3 = document.querySelector('#anime3')
-
-// form.addEventListener("submit", (event) => {
-//   event.preventDefault()
-
-// fetch (titleURL)
-// .then((response) => response.json())
-// .then((mainTitle) => {
-
-//   const show = mainTitle.anime;
-//   const showS = document.createElement('p');
-//   showS.innerHTML = `<strong>Anime: </strong>${show}`;
-//   anime3.append(showS);
-// })
-// })
-
-// const url = `${BASE_URL}${x}${titleURL}`
-// form.reset()
-// // const hiddenLocation = document.querySelector('#anime2')
-// // hiddenLocation.innerHTML = `<h2>${x}</h2>`
-// })
-//  })
+})
 
