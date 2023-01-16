@@ -49,15 +49,20 @@ fetch (url)
 .then((response) => response.json())
 .then((mainTitle) => {
 
-  const show = mainTitle.anime;
+  const show = mainTitle.quote;
   const showS = document.createElement('p');
-  showS.innerHTML = `<strong>Anime: </strong>${show}`;
-  anime3.append(showS);
+  showS.innerHTML = `${show}`;
+  quote3.append(showS);
 
   const animeTitle = mainTitle.anime;
   const titleS = document.createElement('p');
-  titleS.innerHTML = `<strong>Quote: </strong>${animeTitle}`;
-  quote3.append(showS);
+  titleS.innerHTML = `${animeTitle}`;
+  anime3.append(titleS);
+
+  // const show = mainTitle.character;
+  // const showS = document.createElement('p');
+  // showS.innerHTML = `${show}`;
+  // quote3.append(showS);
   
 })
 })
