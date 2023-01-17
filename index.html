@@ -32,8 +32,8 @@
      <section class="searchBar">
         <form id="searching">
             <label for="search">Or feel free to search up your favorite character or Anime</label>
-            <p><input id="inputText" type="text" placeholder="Search..."></p>
-            <input class="button2" id="favorite" type="submit" value="Who's your favorite character?">
+            <p><input required id="inputText" type="text" placeholder="Search..."></required></p>
+            <input class="button2" id="favorite" type="submit" value="Who's your favorite character?" >
         </form>
      <br>
      <br>
@@ -45,7 +45,17 @@
          <br>
          <div class="anime3" id="anime3">Anime (CHANGE)</div>
         </div> 
-     </form>
+    </form>
+    <aside class="sidebar">
+        <div>
+            <section class="pSearch">
+                <h4>Previous Searches:</h4>
+                <ul id="searchHistory">
+                    <p class="noPrevSearch">No previous searches</p>
+                </ul>
+            </section>
+        </div>
+    </aside>
      </section>
     </main>
   </body>

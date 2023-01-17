@@ -28,9 +28,10 @@ fetch(BASE_URL)
   animeS.innerHTML = `<strong><u>${animeShow}<u></strong>`;
   anime2.append(animeS);
 
+  const preSearch = document.querySelector('ul');
   
 
- })
+})
 .catch((err) => console.log(err))
 })
 
