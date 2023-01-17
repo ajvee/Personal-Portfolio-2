@@ -1,11 +1,13 @@
 const BASE_URL = `https://animechan.vercel.app/api/random`
-//const button = document.querySelector("button");
-//const input = document.querySelector("input");
 const main = document.querySelector('main');
 const quote2 = document.querySelector('#quote2');
 const character = document.querySelector('#character');
 const anime2 = document.querySelector('#anime2');
 const form = document.querySelector('#barS');
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault()
+   
 
 fetch(BASE_URL)
  .then((res) => res.json())
@@ -30,21 +32,27 @@ fetch(BASE_URL)
 
  })
 .catch((err) => console.log(err))
+})
 
 const titleURL = `https://animechan.vercel.app/api/random/anime?title=`
+const characterURL = `https://animechan.vercel.app/api/random/character?name=`
 const searching = document.querySelector('#searching');
 const anime3 = document.querySelector('#anime3');
 const quote3 = document.querySelector('#quote3');
+const character2 = document.querySelector('#character2')
 
-searching.addEventListener("submit", (event) => {
-  event.preventDefault()
+ searching.addEventListener("submit", (e) => {
+ e.preventDefault();
+  
   const search = document.querySelector('#inputText')
   
   let userAnimeInput = search.value
 
-  const url = `${titleURL}${userAnimeInput}`
- 
-form.reset()
+  const url = `${titleURL}${userAnimeInput}` && `${characterURL}${userAnimeInput}`
+  
+  searching.reset()
+  
+
 fetch (url)
 .then((response) => response.json())
 .then((mainTitle) => {
@@ -59,10 +67,10 @@ fetch (url)
   titleS.innerHTML = `${animeTitle}`;
   anime3.append(titleS);
 
-  // const show = mainTitle.character;
-  // const showS = document.createElement('p');
-  // showS.innerHTML = `${show}`;
-  // quote3.append(showS);
+  const animeChar = mainTitle.character;
+  const char = document.createElement('p');
+  char.innerHTML = `${animeChar}`;
+  character2.append(char);
   
 })
 })
