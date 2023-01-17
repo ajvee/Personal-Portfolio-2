@@ -1,41 +1,40 @@
  html {
-  background: url("armoredcore6.jpeg") no-repeat center center fixed;
+  background: url("aot\ sky\ .webp") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  margin: 0;
+  image-rendering: optimizeQuality;
   }
 
   header {
     width: 100%;
     height: 50px;
-    background-color: teal;
+    background-color: none;
     text-align: center;
-    border: 4mm ridge gray;
+    border: 5mm ridge gray;
+    opacity: .7;
   }
 
-nav {
-  background-color: whitesmoke;
-  box-shadow: black;
-  border: none;
-    outline: 50px;
+.topnav-right {
+  float:right;
+  cursor: pointer;
+}
+    /* outline: 50px;
     display: inline-block;
     padding: 10px;
-    color: white;
     text-align: center;
     cursor: pointer;
     width: 20%;
-  
-}
+  } */
 
 h1 {
-    background-color: gray;
+    background-color: white;
     color: black;
 }
 
 .randomBar{
-    color: red 
+    color: white 
 }
 
 .button {
@@ -47,7 +46,7 @@ h1 {
 
 
 .searchBar {
-    color: black
+    color: white
 }
 
 .button2 {
@@ -65,15 +64,15 @@ h1 {
 }
 
 .quote2 {
-  color: purple
+  color: white;
 }
 
 .character {
-  color:brown
+  color:white;
 }
 
 .anime2 {
-  color: blue
+  color: white;
 }
 
 .mainBox2 {
