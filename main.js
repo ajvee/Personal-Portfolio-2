@@ -15,17 +15,17 @@ fetch(BASE_URL)
 
   const animeQuote = mainQuote.quote;
   const quoteS = document.createElement('p');
-  quoteS.innerHTML = `<strong>Quote: </strong>${animeQuote}`;
+  quoteS.innerHTML = `<strong><i>${animeQuote}<i></strong>`;
   quote2.append(quoteS);
   
   const animeCharacter = mainQuote.character;
   const characterS = document.createElement('p');
-  characterS.innerHTML = `<strong>Character: </strong>${animeCharacter}`;
+  characterS.innerHTML = `<strong>${animeCharacter}</strong>`;
   character.append(characterS);
 
   const animeShow = mainQuote.anime;
   const animeS = document.createElement('p');
-  animeS.innerHTML = `<strong>Anime: </strong>${animeShow}`;
+  animeS.innerHTML = `<strong><u>${animeShow}<u></strong>`;
   anime2.append(animeS);
 
   
