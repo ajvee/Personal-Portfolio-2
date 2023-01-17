@@ -21,17 +21,9 @@
   float:right;
   cursor: pointer;
 }
-    /* outline: 50px;
-    display: inline-block;
-    padding: 10px;
-    text-align: center;
-    cursor: pointer;
-    width: 20%;
-  } */
 
 h1 {
     margin-block-start: auto;
-    
     background-color: white;
     color: black;
 }
@@ -46,7 +38,6 @@ h1 {
 .button:hover {
   background-color: skyblue;
 }
-
 
 .searchBar {
     color: white
