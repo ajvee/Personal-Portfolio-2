@@ -6,8 +6,8 @@ const anime2 = document.querySelector('#anime2');
 const form = document.querySelector('#barS');
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault()
-   
+event.preventDefault()
+form.reset() 
 
 fetch(BASE_URL)
  .then((res) => res.json())
@@ -27,8 +27,6 @@ fetch(BASE_URL)
   const animeS = document.createElement('p');
   animeS.innerHTML = `<strong><u>${animeShow}<u></strong>`;
   anime2.append(animeS);
-
-  const preSearch = document.querySelector('ul');
   
 
 })
@@ -72,6 +70,25 @@ fetch (url)
   const char = document.createElement('p');
   char.innerHTML = `${animeChar}`;
   character2.append(char);
+
+  const prevSearch = document.querySelector('ul');
+  const link = document.createElement('a');
+  const x = document.createElement('li');
+  link.href = '#';
+  prevSearch.append(x);
+
+  const prevS = document.querySelector('.noPrevSearch');
+  prevS.innerHTML = ''
+
+  x.anime = `${animeTitle}`
+  link.innerHTML = `${userAnimeInput}`
+  x.prepend(link)
+  const y = document.querySelector('.searchBar')
+  link.addEventListener('click', () => {
+    y.innerHTML = ''
+  })
+
+
   
 })
 })

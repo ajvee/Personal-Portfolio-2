@@ -1,5 +1,19 @@
 html {
-    background-color: pink;   
+    box-sizing: border-box;
+}
+
+nav {
+  background-color: whitesmoke;
+  box-shadow: black;
+  border: none;
+    outline: 50px;
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 20%;
+  
 }
 
 h1 {
@@ -13,6 +27,9 @@ h1 {
 .button {
     cursor: pointer;
 }
+.button:hover {
+  background-color: #555;
+}
 
 
 .searchBar {
@@ -21,6 +38,9 @@ h1 {
 
 .button2 {
     cursor: pointer;
+}
+.button2:hover {
+  background-color: #555;
 }
 
 .mainBox  {
